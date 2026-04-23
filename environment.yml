@@ -1,0 +1,16 @@
+name: yolo-fall-detection
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch>=2.2
+  - torchvision
+  - cudatoolkit=11.8
+  - pip:
+      - ultralytics==8.3.30
+      - opencv-python>=4.10.0
+      - PyYAML>=6.0.1
+      - PyQt5>=5.15.10
+      - pandas>=2.2.2
