@@ -1,0 +1,19 @@
+# Recommended high-quality public datasets for this project
+
+1) Le2i Fall Detection Dataset (video-based, widely used for fall detection benchmark)
+   - Kaggle mirror: https://www.kaggle.com/datasets/soumikrakshit/le2i-fall-detection-dataset
+   - Notes: Contains realistic indoor fall/non-fall actions; suitable for rule calibration and threshold testing.
+
+2) UR Fall Detection Dataset (RGB-D + acceleration, public benchmark)
+   - Official page: http://fenix.univ.rzeszow.pl/~mkepski/ds/uf.html
+   - Google Dataset Search entry: https://datasetsearch.research.google.com/search?query=UR%20Fall%20Detection%20Dataset
+   - Notes: Helpful for cross-scene validation and improving generalization.
+
+3) Multiple Cameras Fall Dataset (multi-view scenes)
+   - Kaggle: https://www.kaggle.com/datasets/tapakah68/multiple-cameras-fall-dataset
+   - Notes: Useful for training robustness to different camera angles.
+
+Recommended use strategy (aligned with paper implementation):
+- Primary training: Le2i + Multiple Cameras Fall Dataset.
+- Validation/generalization test: UR Fall Detection Dataset.
+- Unified preprocessing: frame extraction, 640x640 resize, person-box annotation in YOLO format, 8:2 train/val split.

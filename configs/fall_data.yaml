@@ -1,0 +1,7 @@
+# YOLOv8 dataset config
+path: datasets/custom
+train: images/train
+val: images/val
+
+names:
+  0: person

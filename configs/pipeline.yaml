@@ -1,0 +1,9 @@
+model_path: yolov8n.pt
+device: cpu
+input_size: 640
+rule:
+  aspect_ratio_threshold: 1.25
+  center_drop_threshold: 0.18
+  confidence_threshold: 0.45
+  min_fall_frames: 4
+  recovery_frames: 6
